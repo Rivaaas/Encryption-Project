@@ -26,7 +26,7 @@ function App() {
   }, [])
 
   const reset = () => {
-    document.getElementById("txt").value = "";
+    setPalabra("")
   }
 
 
@@ -45,7 +45,8 @@ function App() {
           <div>
             <Typography marginTop="1rem" component={'span'}>
               <TextField id="txt" variant="outlined"
-                onChange={(e) => setPalabra(e.target.value)} />
+                onChange={(e) => setPalabra(e.target.value)}
+                value={palabra} />
             </Typography>
           </div>
           <Grid marginTop="5px">
